@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "face-anti-spoofing"
+name = "face_anti_spoofing"
 version = "0.1.0"
 description = "Model for face antispoof wrapped to be package like."
 authors = ["Gleb <maxwellgleb@gmail.com>"]
 readme = "README.md"
-packages = [{include = "face_anti_spoofing"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
