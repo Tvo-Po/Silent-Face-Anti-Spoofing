@@ -5,9 +5,11 @@
 # @File : anti_spoof_predict.py
 # @Software : PyCharm
 
-import os
-import cv2
 import math
+import os
+from pathlib import Path
+
+import cv2
 import torch
 import numpy as np
 import torch.nn.functional as F
@@ -23,6 +25,10 @@ MODEL_MAPPING = {
     'MiniFASNetV1SE':MiniFASNetV1SE,
     'MiniFASNetV2SE':MiniFASNetV2SE
 }
+
+
+CAFFEMODEL = Path(__file__).parent / 'resources' / 'detection_model' / 'Widerface-RetinaFace.caffemodel'
+DEPLOY = Path(__file__).parent / 'resources' / 'detection_model' / 'deploy.prototxt'
 
 
 class Detection:
