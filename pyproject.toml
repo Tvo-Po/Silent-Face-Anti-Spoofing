@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Model for face antispoof wrapped to be package like."
 authors = ["Gleb <maxwellgleb@gmail.com>"]
 readme = "README.md"
-packages = [{include = "antispoofing"}]
+packages = [{include = "antispoofing"}, {include = "resources"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
