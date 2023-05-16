@@ -33,9 +33,7 @@ DEPLOY = Path(__file__).parent / 'resources' / 'detection_model' / 'deploy.proto
 
 class Detection:
     def __init__(self):
-        caffemodel = "./resources/detection_model/Widerface-RetinaFace.caffemodel"
-        deploy = "./resources/detection_model/deploy.prototxt"
-        self.detector = cv2.dnn.readNetFromCaffe(deploy, caffemodel)
+        self.detector = cv2.dnn.readNetFromCaffe(DEPLOY.as_posix(), CAFFEMODEL.as_posix())
         self.detector_confidence = 0.6
 
     def get_bbox(self, img):
